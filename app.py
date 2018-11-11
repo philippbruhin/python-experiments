@@ -49,3 +49,14 @@ for x in range(1,100):
 while age < 30:
     print(age)
     age += 1
+
+dogs = {"Fido":8, "Sally":17, "Sean":2}
+print(dogs)
+print(dogs["Sally"])
+
+dogs = {"Fido":8, "Sally":17, "Sean":2}
+del(dogs["Sally"])
+print(dogs)
+
+dogs["Sara"] = 6
+print(dogs)
