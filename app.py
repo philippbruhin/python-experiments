@@ -60,3 +60,27 @@ print(dogs)
 
 dogs["Sara"] = 6
 print(dogs)
+
+
+class Dog:
+
+    def __init__(self, name, age, furcolor):
+        self.name = name
+        self.age = age
+        self.furcolor = furcolor
+
+    dogInfo = "Hey dogs are cool"
+    
+    def bark(self, str):
+        print("BARK!" + str)
+
+mydog = Dog("fido", 13, "Brown")
+mydog.bark("yeah")
+
+#mydog.name = "Fido"
+#mydog.age = 16
+
+print(mydog.name)
+print(mydog.age)
+
+print(Dog.dogInfo)
