@@ -37,3 +37,15 @@ dognames[2] = "ReplaceName"
 
 print(dognames)
 print(len(dognames))
+
+dognames2 = ["Fido", "Sean", "Sally"]
+
+for dog in dognames2:
+    print(dog)
+
+for x in range(1,100):
+    print(x)
+
+while age < 30:
+    print(age)
+    age += 1
