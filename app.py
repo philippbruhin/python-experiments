@@ -2,4 +2,4 @@ age = 27
 
 name = "Philipp"
 
-print(age)
+print("Hello my name is {} and I am {} years old.".format(name, age))
