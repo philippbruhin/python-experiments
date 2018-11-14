@@ -9,5 +9,14 @@ def count(request):
 
     wordlist = fulltext.split()
 
+    worddictionary = {}
 
-    return render(request, 'count.html', {'fulltext':fulltext, 'count':len(wordlist)})
+    for word in wordlist:
+        if word in worddictionary:
+            # Increase
+            worddictionary[word] += 1
+        else:
+            #add to the dictionary
+            worddictionary[word] = 1
+
+    return render(request, 'count.html', {'fulltext':fulltext, 'count':len(wordlist), 'worddictionary':worddictionary.items})
