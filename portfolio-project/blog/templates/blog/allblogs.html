@@ -48,11 +48,11 @@
 
                 <a href=""><h2>{{ blog.title }}</h2></a>
 
-                <p>{{ blog.pub_date }}</p>
+                <p>{{ blog.pub_date_pretty }}</p>
 
                 <img class="img-fluid" src="{{ blog.image.url }}" alt="Blog Image" heigth="200" width="200" />
 
-                <p>{{ blog.body }}</p>
+                <p>{{ blog.summary }}</p>
 
             {% endfor %}
 
