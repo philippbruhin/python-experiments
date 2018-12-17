@@ -42,11 +42,9 @@
             <h2>Latest posts</h2>
             <hr />
 
-            {{ blogs.summary }}
-
             {% for blog in blogs.all %}
 
-                <a href=""><h2>{{ blog.title }}</h2></a>
+                <a href="{% url 'detail' blog.id %}"><h2>{{ blog.title }}</h2></a>
 
                 <p>{{ blog.pub_date_pretty }}</p>
 
