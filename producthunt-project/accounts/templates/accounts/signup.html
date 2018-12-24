@@ -2,6 +2,14 @@
 
 {% block content %}
 
+{% if error %}
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+    </div>
+{{ error }}
+
+{% endif %}
+
 <h1>Sign up</h1>
 
 <form method="POST" action="{% url 'signup' %}">
