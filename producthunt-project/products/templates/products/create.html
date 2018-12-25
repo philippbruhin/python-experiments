@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if error %}
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+    </div>
+{{ error }}
+
+{% endif %}
+
+<h1>Create</h1>
+
+<form method="POST" action="{% url 'create' %}" enctype="multipart/form-data">
+
+    {% csrf_token %}
+
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" name="title" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="body">Body</label>
+        <input type="textbox" name="body" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="url">URL</label>
+        <input type="text" name="url" class="form-control" />
+    </div>
+
+    <br /><br />
+
+    <div class="form-group">
+        <input type="file" name="icon" />
+    </div>
+
+    <br /><br />
+
+    <div class="form-group">
+        <input type="file" name="image" />
+    </div>
+
+    <br /><br />
+
+    <button type="submit" class="btn btn-primary">Add product</button>
+
+</form>
+
+{% endblock %}
